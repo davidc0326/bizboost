@@ -109,7 +109,7 @@
     text-transform: capitalize;
   }
   
-   a:hover, 
+    a:hover,  
   .logo:hover {
     color: var(--primary);
   }
@@ -117,7 +117,12 @@
   .selected {
     color: var(--primary);
   }
-  
+  .sub-menu a:hover{
+    font-size: 0.75em;
+    font-weight: var(--normal);
+    margin: 5px;
+    transition: .5s;
+  }
   .my-button {
     width: 170px;
     padding: 15px 34.86px 16.08px 35px;

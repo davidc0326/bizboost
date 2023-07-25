@@ -1,344 +1,433 @@
 /*=======================================
     #Variables
 =========================================*/
+
+/**
+  TABLE OF CONTENTS
+
+  COLORS
+  Brand colors............................These are the main brand colors.
+  Neutral colors..........................White and black, gray sacale, secondary colors.
+  Utility colors..........................Other colors to represent states: info, warning, sucess, etc.
+
+  TYPOGRAPHY
+  Font famillies..........................The fonts used in the design system.
+  Font weights............................Font weights
+  Sizes...................................Font sizing for body text, paragraphs, inputs
+  Heading sizes...........................Font sizing for page headings
+
+  BREAKPOINTS
+  Breakpoints.............................Global responsive breakpoints definitions
+*/
+
 :root {
-    /*=======================================
+  /*=======================================
     COLORS
-    =========================================*/
-  
-    /*============================
+  =========================================*/
+
+  /*=========================
     Brand Colors
-    ============================*/
-    --primary: #2292b1;
-    --gradient-start: #1b3385;
-    --gradient-end: #25c5c9;
-  
-    /*============================
+  ==========================*/
+  --primary: #2292b1;
+  --gradient-start: #1b3385;
+  --gradient-end: #25c5c9;
+
+  /*=========================
     Neutral Colors
-    ============================*/
-    --background: #0a0c11;
-    --body-text: #abadb3;
-    --border-color: #323438;
-    --sub-menu-bg: #222;
-    --white: #fff;
-  
-    /*=======================================
+  ==========================*/
+  --background: #0a0c11;
+  --body-text: #abadb3;
+  --border-color: #323438;
+  --sub-menu-bg: #222;
+  --white: #fff;
+
+  /*=========================
+    Utility Colors
+  ==========================*/
+
+  /*=======================================
     TYPOGRAPHY
-    =========================================*/
-    /* 
+  =========================================*/
+  /* 
     1. The Poppins font. This is the main font.
     https://fonts.googleapis.com/css?family=Poppins
+
     2. The Courier font. This is used for <pre> code.
-    https://fonts.googleapis.com/css?family=Courier+Prime
-    */
-    --base-font: 20px;
-    --primary-font: "Poppins";
-    --secondary-font: "Courier+Prime";
-  
-    /*=======================================
-    Font Weights
-    =========================================*/
-    --thin: 100;
-    --extra-light: 200;
-    --light: 300;
-    --normal: 400;
-    --medium: 500;
-    --semi-bold: 600;
-    --bold: 700;
-    --extra-bold: 800;
-    --heavy: 900;
-  }
-  
-  /*=======================================
-  BREAKPOINTS
-  =========================================*/
-    
-  body {
-    box-sizing: border-box;
-    font-family: var(--primary-font);
-    font-size: var(--base-font);
-    color: var(--body-text);
-    background: var(--background);
-  }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--primary-font);
-    font-weight: var(--medium);
-    color: var(--white);
-    margin: 0;
-  }
-  
-  h1 {
-    font-size: 4em;
-    line-height: 1.5em;
-  }
-  
-  h4,
-  h5 {
-    font-weight: var(--bold);
-  }
-  
-  h6 {
-    font-weight: var(--semi-bold);
-  }
-  
-  ul {
-    list-style-type: none;
-    display: flex;
-    padding: 0;
-  }
-  
-  a {
-    color: var(--body-Text);
-    text-decoration: none;
-    font-size: 0.9em;
-    font-style: normal;
-    font-weight: var(--normal);
-    line-height: 2.4em;
-    text-transform: capitalize;
-  }
-  
-    a:hover,  
-  .logo:hover {
-    color: var(--primary);
-  }
-  
-  .selected {
-    color: var(--primary);
-  }
-  .sub-menu a:hover {
-    font-size: 0.75em;
-    font-weight: var(--normal);
-    margin: 5px;
-    transition: .5s;
-  }
-  .my-button {
-    width: 170px;
-    padding: 15px 34.86px 16.08px 35px;
-    border: 0;
-    height: 56px;
-    font-size: 0.9em;
-    font-weight: var(--bold);
-    border-radius: 30px;
-    text-transform: capitalize;
-    color: var(--white); 
-    background: linear-gradient(
-      90deg,
-      var(--gradient-start) 0%,
-      var(--gradient-end) 100%
-    );
-    
-  }
-  .my-button:hover {
-    background: var(--white);
-    color:var(--background);
-   
- }
-  
-  /*=======================================
-  HERO
-  =========================================*/
-  header {
-    display: flex;
-    width: 100%;
-    height: 118.08px;
-    margin: 0 auto;
-    padding-left: 96px;
-    padding-right: 105px;
-  }
-  
-  header * {
-    flex: 1;
-  }
-  
-  .main-menu li {
-    margin: 0 18px;
-  }
-  
-  .main-menu li:nth-child(2) ul {
-    display: none;
-  }
-  
-  .main-menu li:nth-child(2) {
-    min-width: 112px;
-    position: relative;
-  }
-  
-  .main-menu li:nth-child(2):hover ul {
-    display: block;
-  }
-  
-  .sub-menu {
-    position: absolute;
-    top: 44px;
-    left: -20px;
-    z-index: 99;
-  }
-  
-  .sub-menu li {
-    width: 235px;
-    height: 44px;
-    background-color: var(--sub-menu-bg);
-    border-bottom: 1px solid var(--border-color);
-    padding-left: 23px;
-  }
-  
-  .sub-menu a {
-    font-size: 0.75em;
-    font-weight: var(--normal);
-  }
-  
-  .logo {
-    font-size: 1.6em;
-    font-weight: var(--bold);
-    color: var(--white);
-  }
-  
-  .logo:hover {
-    color: var(--primary);
-    transition: 0.5s;
-  }
-  
-  .socials {
-    justify-content: flex-end;
-  }
-  
-  .socials li {
-    flex: 0;
-    padding: 0 16px;
-  }
+    https://fonts.googleapis.com/css?family=Poppins
+  */
 
-  .socials li a:hover image {
-    width: 100%;
-    height: 100%;
-    transform: scale(1.2em);
-  }
-  
-  main section {
-    width: 760px;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 76px;
-    padding-bottom: 70px;
-  }
-  
-  main section p {
-    margin-bottom: 50px;
-    font-size: 1.2em;
-    font-weight: var(--light);
-  }
-  
-  .lowlight {
-    opacity: 0.5;
-  }
- 
-  .our-services {
-    margin-top:100px;
-    display: flex;
-    justify-content: center;
-    inset: 0;
-    /* margin: 0; */
-    flex: auto;
-  }
-  h3 {
-    opacity: 0.5;
-    font-size: var(--bold);
-    font-weight: 600;
-  }
-  picture {
-    display: block;
-  }  
-  /*  
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .img {
+  /*=========================
+    Font famillies
+  ==========================*/
+  --primary-font: "Poppins";
 
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .container h3{
-      font-size: 24px;
-      margin: 0 0 20px;
-    }
-    /* margin-block-start: 20;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 40px;
-    /* height: auto; */
-    /* max-width: unset; */
-    /* vertical-align: middle; */
-    /* width: 200px; */ 
+  /*=========================
+  Font weights
+  ==========================*/
+  --thin: 100;
+  --extra-light: 200;
+  --light: 300;
+  --normal: 400;
+  --medium: 500;
+  --semi-bold: 600;
+  --bold: 700;
+  --extra-bold: 800;
+  --heavy: 900;
 
-  /*  
-  .our-services h3 {
-    margin-top: 110px;
-    align-items: right;
-  }
-.our-services p h2 {
-  margin-left: 100px;
+  /*=========================
+  Sizes
+  ==========================*/
+  --base-font: 20px;
 }
 
-.container {
+/*=======================================
+    RESETS
+=========================================*/
+body {
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+  font-size: var(--base-font);
+  color: var(--body-text);
+  background: var(--background);
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/*=========================
+  Heading Sizes
+==========================*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--primary-font);
+  font-weight: var(--medium);
+  color: var(--white);
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.1em;
+  line-height: 1.72em;
+}
+
+h2 {
+  font-size: 1.6em;
+  line-height: 1.29em;
+  text-transform: capitalize;
+  margin-top: 14px;
+}
+
+h3 {
+  font-size: 1.6em;
+  font-weight: var(--bold);
+}
+
+h4,
+h5 {
+  font-weight: var(--bold);
+}
+
+h6 {
+  font-weight: var(--semi-bold);
+  font-size: 16px;
+  color: var(--body-text);
+}
+
+ul {
+  list-style-type: none;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
+  padding: 0;
 }
 
-.image {
-  flex: 0 0 50%;
-  max-width: 50%;
+ul li {
+  position: relative;
 }
 
-.content {
-  flex: 0 0 50%;
-  /* max-width: 50%; 
-  padding: 0 30px;
+figure {
+  margin: 0;
+  padding: 0;
 }
 
 img {
-
   width: 100%;
-  height: auto;
-  display: block;
-}
-.container h3{
-  font-size: 24px;
-  margin: 0 0 20px;
-}
-.container h2 {
-  font-size: 24px;
-  margin: 0 0 20px;
 }
 
-.container p {
-  font-size: 16px;
-  margin: 0 0 10px;
-
+a {
+  color: var(--body-text);
+  text-decoration: none;
+  font-size: 0.9em;
+  font-style: normal;
+  font-weight: var(--normal);
+  line-height: 2.4em;
+  text-transform: capitalize;
 }
 
-.container h3 h2 p .my-button{
-  width: 1000px;
+a:hover,
+.logo h2:hover {
+  color: var(--primary);
+  transition: 1.2s;
+}
+
+.lowlight {
+  opacity: 0.5;
+}
+
+.gradient-button {
+  padding: 15px 34.86px 16.08px 35px;
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--white);
+  border-radius: 30px;
+  font-size: 0.9em;
+  font-weight: var(--bold);
+  line-height: 1.6em;
+  background: linear-gradient(
+    90deg,
+    var(--gradient-start) 0%,
+    var(--gradient-end) 100%
+  );
+}
+
+.gradient-button:hover {
+  background: var(--white);
+  color: var(--background);
+}
+
+/*=======================================
+    Mobile First
+=========================================*/
+.blocks {
+  padding: 0 30px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  flex: 3;
+}
+
+.mobile {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mobile img {
+  width: 16px;
+}
+
+.desktop {
+  display: none;
+}
+
+.submenu {
+  display: none;
+}
+
+.social {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+}
+
+.social ul {
+  column-gap: 25px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 42px 0;
+  margin: 0 auto;
+}
+
+main > * {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-tagline {
+  margin-top: 24px;
+}
+
+.hero-cta {
+  margin-top: 14px;
+}
+
+.hero-video video {
+  width: 100%;
+  max-width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+}
+
+.our-services *,
+.big-numbers * {
+  border: 1px solid var(--body-text);
+} 
+
+.our-services {
+  margin: 50px 0;
+}
+
+.big-numbers {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 42px;
+}
+
+.number-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.number-box > * {
+  display: flex;
+  justify-content: center;
+}
+
+/*=======================================
+    TABLET & DESKTOP BREAKPOINTS
+=========================================*/
+@media all and (min-width: 479px) and (max-width: 1280px) {
+}
+
+@media all and (min-width: 479px) {
+  .selected {
+    color: var(--primary);
   }
+
+  .circle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    position: absolute;
+    left: -11px;
+    top: -2px;
+  }
+
+  .circle:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  .blocks {
+    padding: 0 88px;
+  }
+
+  .hero {
+    padding: 0 85px;
+  }
+
+  .logo {
+    flex: 1;
+  }
+
+  .logo h2 {
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+  }
+
+  .desktop ul {
+    column-gap: 35px;
+  }
+
+  .desktop ul li:nth-child(2) img {
+    width: 16px;
+  }
+
+  .desktop ul li {
+    position: relative;
+  }
+
+  .desktop ul li:nth-child(2):hover .submenu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .submenu {
+    width: 230px;
+    background-color: var(--sub-menu-bg);
+    z-index: 99;
+    transition: 2s;
+  }
+
+  .submenu li {
+    min-width: 100%;
+    padding-left: 20px;
+    border: 1px solid var(--border-color);
+  }
+
+  .submenu li:hover {
+    padding-left: 30px;
+  }
+
+  .social {
+    flex: 1;
+  }
+
+  h1 {
+    font-size: 4em;
+    line-height: 1.72em;
+  }
+
+  h3 {
+    font-size: 2.27em;
+  }
+
+  main {
+    max-width: 760px;
+    /* padding: 70px 320px; */
+  }
+
+  .our-services {
+    display: flex;
+    margin: 131px 0;
+  }
+
+  .big-numbers {
+    flex-direction: row;
+    gap: 40px;
+    padding: 0 80px;
+    margin-bottom: 131px;
+  }
+
+  .big-numbers > * {
+    flex: 1;
+  }
+
+  .our-services > * {
+    flex: 1;
+  }
+  .our-services-layout {
+    padding: 0 12%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}

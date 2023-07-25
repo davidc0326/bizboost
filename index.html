@@ -1,26 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courier+Prime" />
-    <link rel="stylesheet" href="/index.css" /> 
-    
-</head>
-<body>
-    <section>
+    <title>BizBoost Mobile First</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <section class="blocks">
+      <!-- star hero section -->
+      <section class="hero">
         <header>
-          <a href="/" class="logo">BizBoost</a>
-          <nav>
-            <ul class="main-menu">
-              <li><a href="#" class="selected">home</a></li>
+          <div class="logo">
+            <a href="/">
+              <h2>BizBoost</h2>
+            </a>
+          </div>
+          <nav class="mobile">
+            <img src="src/img/menu.svg" alt="menu" />
+          </nav>
+          <nav class="desktop">
+            <ul>
               <li>
-                <a href="#">
-                  Templates
-                  <img src="./src/img/Vector.svg" alt="arrow" />
-                </a>
-                <ul class="sub-menu">
+                <a href="#" class="selected">Home</a>
+              </li>
+              <li>
+                <a href="#">Templates</a>
+                <img src="src/img/arrow.svg" alt="arrow" />
+                <ul class="submenu">
                   <li>
                     <a href="#">Right Sidebar</a>
                   </li>
@@ -32,72 +40,110 @@
                   </li>
                 </ul>
               </li>
-  
               <li><a href="#">Blog</a></li>
               <li><a href="#">Contact</a></li>
             </ul>
           </nav>
-          <ul class="socials">
-            <li>
-              <a href="https://facebook.com/codigoingenierooficial" target="_blank">
-                <img src="./src/img/facebook.svg" alt="facebook"
-              /></a>
-            </li>
-  
-            <li>
-              <a href="https://twitter.com/CodigoIngenier" target="_blank">
-                <img src="./src/img/twitter.svg" alt="twitter" />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.ln.com/codigoingenierooficial/" target="_blank">
-                <img src="./src/img/linked.svg" alt="ln" />
-              </a>
-            </li>
-          </ul>
-        </header>
-        <main>
-          <section>
-            <h1>We <span class="lowlight">build</span> digital experiences.</h1>
-  
-            <p>We collaborate with smart and creative people to build awesome WordPress Full Site Editing Themes.</p>
-            <button class="my-button" type="button"> Get starter</button>
-            <!-- <a href="#" class="my-button">Get Started</a>  -->
-         
-          </section>
-          <figure>
-            <video
-              width="100%"
-              controls
-              loop
-              src="https://fse.catchthemes.com/bizboost-free/wp-content/themes/bizboost/assets/video/video-featured.mp4"
-            ></video>
-          </figure>
-        </main>
-      </section>
 
-      <div class="container">
-        <div class="image">
-          <img src="./src/img/hero-content.png" alt="Image">
+          <div class="social">
+            <ul>
+              <li>
+                <div class="circle"></div>
+                <a href="#">
+                  <img src="src/img/facebook.svg" alt="fb" />
+                </a>
+              </li>
+              <li>
+                <div class="circle"></div>
+                <a href="#">
+                  <img src="src/img/twitter.svg" alt="twitter" />
+                </a>
+              </li>
+              <li>
+                <div class="circle"></div>
+                <a href="#">
+                  <img src="src/img/linked.svg" alt="linkedIn" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </header>
+
+        <section class="main">
+          <main>
+            <div class="hero-title">
+              <h1>We <span class="lowlight">build</span> digital experiences.</h1>
+            </div>
+            <div class="hero-tagline">
+              We collaborate with smart and creative people to build awesome WordPress Full Site Editing Themes.
+            </div>
+            <div class="hero-cta">
+              <a href="#" class="gradient-button">get started</a>
+            </div>
+          </main>
+          <div class="hero-video">
+            <figure>
+              <video
+                src="https://fse.catchthemes.com/bizboost-free/wp-content/themes/bizboost/assets/video/video-featured.mp4"
+                poster="https://fse.catchthemes.com/bizboost-free/wp-content/themes/bizboost/assets/images/video-featured.jpg"
+                controls
+              >
+                Video not supported
+              </video>
+            </figure>
+          </div>
+        </section>
+      </section>
+      <!-- ends hero section -->
+
+      <!-- Our Services Section -->
+      <section class="our-services">
+        <div class="services-figure">
+          <figure>
+            <img src="src/img/hero-content.png" alt="hero-content" />
+          </figure>
         </div>
-        <div class="content">
-          <h3>Heading</h3>
-          <h2>We Solve Creative Delusions Efficiently</h2>
-          <p>The display employs new techniques and technology to precisely follow the curves of the design, all the way to the elegantly rounded corners.</p>
-          <button class="my-button" type="button"> Get starter</button>
+        <div class="our-services-layout">
+          <div class="headings">
+            <h6>OUR SERVICES</h6>
+            <h2>We solve creative delusions efficiently</h2>
+          </div>
+          <p>
+            The display employs new techniques and technology to precisely follow the curves of the design, all the way
+            to the elegantly rounded corners.
+          </p>
+          <div class="our-services-cta">
+            <a href="#" class="gradient-button">get started</a>
+          </div>
         </div>
-      </div>
-    </body>
-      <!-- <section class="our-services">
-        <picture class= "picture" Style="grid-Templates-colum:40% auto> 
-          <img src="./src/img/hero-content.png" alt="cumputer">
-        </picture>
-        <article>
-          <h3>our services</h3>
-          <h2>We Solve Creative Delusions Efficiently</h2>
-          <p></p>
-          <button class="my-button" type="button"> Get starter</button>
-        </article>
-      </section> -->
-</body>
+      </section>
+      <section class="big-numbers">
+        <div class="number-box">
+          <div class="number">
+            <h3>95</h3>
+          </div>
+          <p>Proyects Completed</p>
+        </div>
+        <div class="number-box">
+          <div>
+            <h3>2310</h3>
+          </div>
+          <p>Happy Clients</p>
+        </div>
+        <div class="number-box">
+          <div>
+            <h3>215</h3>
+          </div>
+          <p>Hours Spent</p>
+        </div>
+        <div class="number-box">
+          <div>
+            <h3>479</h3>
+          </div>
+          <p>Members</p>
+        </div>
+      </section>
+      <!-- end of our service section -->
+    </section>
+  </body>
 </html>

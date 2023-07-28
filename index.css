@@ -300,6 +300,67 @@ main > * {
   justify-content: center;
 }
 
+.we-do {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0;
+}
+.we-do div{
+  width: 100%;
+  text-align: center;
+  line-height: 0%;
+
+  /* align-items: center;
+  align-content: center;
+  background-color: #25c5c9; */
+}
+
+.containers {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  /* padding: 35px; */
+  /* justify-content: space-evenly; */
+}
+  .border {
+   border: 1px dotted white; 
+  padding: 20px;
+  height: 500px;
+  width: 100%; 
+}
+
+.we-do h6, h2 {
+  /* padding: 5; */
+  align-content: center;
+  margin-top: 20px;
+  
+}
+.we-do h2 {
+  margin-bottom: 25px;
+}
+.containers h2{
+  font-size: 1.3em;
+}
+.containers p {
+  font-size: 1.6em;
+  font-size: var(--base-font);
+  font-family: var(--primary-font);
+}
+
+.view-more {
+  
+  background-color: transparent;
+  border: none;
+  color: #f0f2f6;
+  text-decoration-skip-ink: 5;
+  line-height: 1.5;
+  cursor: pointer;
+  border-bottom: 3px solid var(--primary);
+  padding-left: 5px;
+}
+
+
 /*=======================================
     TABLET & DESKTOP BREAKPOINTS
 =========================================*/
@@ -429,5 +490,21 @@ main > * {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+  }
+  .containers {
+    flex-direction: row;
+    flex: 1;
+  }
+  .foto10 img{
+    width: 100%;
+  }
+  .foto10:hover img{
+    transform: scale(1.1);
+    opacity: 0.6;
+    transition: all 0.5s ease-in-out;
+  }
+  .foto10 {
+    
+    overflow: hidden;
   }
 }

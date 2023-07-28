@@ -273,11 +273,11 @@ main > * {
   max-height: 600px;
   object-fit: cover;
 }
-
-.our-services *,
+/* 
+/* .our-services *,
 .big-numbers * {
-  border: 1px solid var(--body-text);
-} 
+  /* border: 1px solid var(--body-text); */
+}  */ */
 
 .our-services {
   margin: 50px 0;
@@ -300,6 +300,9 @@ main > * {
   justify-content: center;
 }
 
+/* what we do section */
+/* ------------------ */
+
 .we-do {
   display: flex;
   flex-direction: column;
@@ -310,56 +313,70 @@ main > * {
   width: 100%;
   text-align: center;
   line-height: 0%;
+}
 
-  /* align-items: center;
+
+.border {
+  border: 1px dotted white; 
+  padding: 20px;
+  height: 550px;
+  width: 100%; 
+}
+
+
+.we-do h6, h2 {
   align-content: center;
-  background-color: #25c5c9; */
+  margin-top: 20px; 
+}
+
+.we-do h2 {
+  margin-bottom: 55px;
 }
 
 .containers {
   gap: 20px;
   display: flex;
   flex-direction: column;
-  /* padding: 35px; */
-  /* justify-content: space-evenly; */
-}
-  .border {
-   border: 1px dotted white; 
-  padding: 20px;
-  height: 500px;
-  width: 100%; 
 }
 
-.we-do h6, h2 {
-  /* padding: 5; */
-  align-content: center;
-  margin-top: 20px;
-  
-}
-.we-do h2 {
-  margin-bottom: 25px;
-}
 .containers h2{
   font-size: 1.3em;
 }
+
 .containers p {
+  padding-top: 20px;
+  padding-bottom: 25px;
   font-size: 1.6em;
   font-size: var(--base-font);
   font-family: var(--primary-font);
+
+}
+.containers a {
+  padding-bottom: 0%;
 }
 
-.view-more {
-  
+.border a {
+  color: var(--body-text);
   background-color: transparent;
   border: none;
-  color: #f0f2f6;
-  text-decoration-skip-ink: 5;
-  line-height: 1.5;
-  cursor: pointer;
-  border-bottom: 3px solid var(--primary);
   padding-left: 5px;
+  font-size: 16px;
+  position: relative;
 }
 
+.border a:hover{
+  color: var(--primary);
+  transition: 1.2s;
+}
+
+.border a::after{
+  content: "" ;
+  width: 100%;
+  border-bottom: 3px solid var(--primary);
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+}
 
 /*=======================================
     TABLET & DESKTOP BREAKPOINTS
@@ -495,16 +512,26 @@ main > * {
     flex-direction: row;
     flex: 1;
   }
-  .foto10 img{
+  .picture img{
     width: 100%;
   }
-  .foto10:hover img{
+  .picture:hover img{
     transform: scale(1.1);
     opacity: 0.6;
     transition: all 0.5s ease-in-out;
   }
-  .foto10 {
+  .picture {
     
     overflow: hidden;
   }
+  .border a:hover::after{
+    content: "" ;
+    width: 30%;
+    border-bottom: 3px solid var(--primary);
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    transition: all 0.5s ease;
+  }
+  
 }

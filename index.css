@@ -1,0 +1,599 @@
+/*=======================================
+    #Variables
+=========================================*/
+
+/**
+  TABLE OF CONTENTS
+
+  COLORS
+  Brand colors............................These are the main brand colors.
+  Neutral colors..........................White and black, gray sacale, secondary colors.
+  Utility colors..........................Other colors to represent states: info, warning, sucess, etc.
+
+  TYPOGRAPHY
+  Font famillies..........................The fonts used in the design system.
+  Font weights............................Font weights
+  Sizes...................................Font sizing for body text, paragraphs, inputs
+  Heading sizes...........................Font sizing for page headings
+
+  BREAKPOINTS
+  Breakpoints.............................Global responsive breakpoints definitions
+*/
+
+:root {
+  /*=======================================
+    COLORS
+  =========================================*/
+
+  /*=========================
+    Brand Colors
+  ==========================*/
+  --primary: #2292b1;
+  --gradient-start: #1b3385;
+  --gradient-end: #25c5c9;
+
+  /*=========================
+    Neutral Colors
+  ==========================*/
+  --background: #0a0c11;
+  --body-text: #abadb3;
+  --border-color: #323438;
+  --sub-menu-bg: #222;
+  --white: #fff;
+
+  /*=========================
+    Utility Colors
+  ==========================*/
+
+  /*=======================================
+    TYPOGRAPHY
+  =========================================*/
+  /* 
+    1. The Poppins font. This is the main font.
+    https://fonts.googleapis.com/css?family=Poppins
+
+    2. The Courier font. This is used for <pre> code.
+    https://fonts.googleapis.com/css?family=Poppins
+  */
+
+  /*=========================
+    Font famillies
+  ==========================*/
+  --primary-font: "Poppins";
+
+  /*=========================
+  Font weights
+  ==========================*/
+  --thin: 100;
+  --extra-light: 200;
+  --light: 300;
+  --normal: 400;
+  --medium: 500;
+  --semi-bold: 600;
+  --bold: 700;
+  --extra-bold: 800;
+  --heavy: 900;
+
+  /*=========================
+  Sizes
+  ==========================*/
+  --base-font: 20px;
+}
+
+/*=======================================
+    RESETS
+=========================================*/
+body {
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+  font-size: var(--base-font);
+  color: var(--body-text);
+  background: var(--background);
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/*=========================
+  Heading Sizes
+==========================*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--primary-font);
+  font-weight: var(--medium);
+  color: var(--white);
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.1em;
+  line-height: 1.72em;
+}
+
+h2 {
+  font-size: 1.6em;
+  line-height: 1.29em;
+  text-transform: capitalize;
+  margin-top: 14px;
+}
+
+h3 {
+  font-size: 1.6em;
+  font-weight: var(--bold);
+}
+
+h4,
+h5 {
+  font-weight: var(--bold);
+}
+
+h6 {
+  font-weight: var(--semi-bold);
+  font-size: 16px;
+  color: var(--body-text);
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+}
+
+ul li {
+  position: relative;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: var(--body-text);
+  text-decoration: none;
+  font-size: 0.9em;
+  font-style: normal;
+  font-weight: var(--normal);
+  line-height: 2.4em;
+  text-transform: capitalize;
+}
+
+a:hover,
+.logo h2:hover {
+  color: var(--primary);
+  transition: 1.2s;
+}
+
+.lowlight {
+  opacity: 0.5;
+}
+
+.gradient-button {
+  padding: 15px 34.86px 16.08px 35px;
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--white);
+  border-radius: 30px;
+  font-size: 0.9em;
+  font-weight: var(--bold);
+  line-height: 1.6em;
+  background: linear-gradient(
+    90deg,
+    var(--gradient-start) 0%,
+    var(--gradient-end) 100%
+  );
+}
+
+.gradient-button:hover {
+  background: var(--white);
+  color: var(--background);
+}
+
+/*=======================================
+    Mobile First
+=========================================*/
+.blocks {
+  padding: 0 30px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  flex: 3;
+}
+
+.mobile {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mobile img {
+  width: 16px;
+}
+
+.desktop {
+  display: none;
+}
+
+.submenu {
+  display: none;
+}
+
+.social {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+}
+
+.social ul {
+  column-gap: 25px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 42px 0;
+  margin: 0 auto;
+}
+
+main > * {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-tagline {
+  margin-top: 24px;
+}
+
+.hero-cta {
+  margin-top: 14px;
+}
+
+.hero-video video {
+  width: 100%;
+  max-width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+}
+/* 
+/* .our-services *,
+.big-numbers * {
+  /* border: 1px solid var(--body-text); */
+  /*  */
+
+.our-services {
+  margin: 50px 0;
+}
+
+.big-numbers {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 42px;
+}
+
+.number-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.number-box > * {
+  display: flex;
+  justify-content: center;
+}
+
+/* what we do section */
+/* ------------------ */
+
+.we-do {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0;
+}
+.we-do div{
+  width: 100%;
+  text-align: center;
+  line-height: 0%;
+}
+
+
+.border {
+  border: 1px dotted white; 
+  padding: 20px;
+  height: 550px;
+  width: 100%; 
+}
+
+
+.we-do h6, h2 {
+  align-content: center;
+  margin-top: 20px; 
+}
+
+.we-do h2 {
+  margin-bottom: 55px;
+}
+
+.containers {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.containers h2{
+  font-size: 1.3em;
+}
+
+.containers p {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 1.6em;
+  font-size: var(--base-font);
+  font-family: var(--primary-font);
+
+}
+.containers a {
+  padding-bottom: 0%;
+}
+
+.border a {
+  color: var(--body-text);
+  background-color: transparent;
+  border: none;
+  padding-left: 5px;
+  font-size: 16px;
+  position: relative;
+}
+
+.border a:hover {
+  color: var(--primary);
+  transition: 1.2s;
+}
+
+.border a::after{
+  content: "" ;
+  width: 100%;
+  border-bottom: 3px solid var(--primary);
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+}
+/* promotionals section */
+
+.backgroud {
+  background-image: url( /src/img/promotional-contact.jpg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  height: 300px;
+
+  }
+
+  .promotionals span {
+    background-color:black;
+    opacity: 0.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 100%;
+  
+  }
+
+  .backgroud h2{
+    margin-block-start: 0;
+    text-align: center;
+  }
+  .backgroud a {
+    margin-top: 40px;
+  }
+.prueba {
+  width: 100%;
+  height: 500px;
+  background-color: aliceblue;
+}
+/* footer section  */
+
+#email {
+  font-size: 1em;
+  padding: 13px;
+  background-color: transparent;
+  border: 2px solid var(--input-border);
+  border-radius: 4px;
+  color: #ffff;
+  border: 1px solid var(--border-color);
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  width: 160px;
+
+}
+.footer-logo .gradient-button {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: 0;
+  padding: 7px 16px 5px;
+  margin-left: -6px;
+}
+
+/*=======================================
+    TABLET & DESKTOP BREAKPOINTS
+=========================================*/
+@media all and (min-width: 479px) and (max-width: 1280px) {
+}
+
+@media all and (min-width: 479px) {
+  .selected {
+    color: var(--primary);
+  }
+
+  .circle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    position: absolute;
+    left: -11px;
+    top: -2px;
+  }
+
+  .circle:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  .blocks {
+    padding: 0 88px;
+  }
+
+  .hero {
+    padding: 0 85px;
+  }
+
+  .logo {
+    flex: 1;
+  }
+
+  .logo h2 {
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+  }
+
+  .desktop ul {
+    column-gap: 35px;
+  }
+
+  .desktop ul li:nth-child(2) img {
+    width: 16px;
+  }
+
+  .desktop ul li {
+    position: relative;
+  }
+
+  .desktop ul li:nth-child(2):hover .submenu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .submenu {
+    width: 230px;
+    background-color: var(--sub-menu-bg);
+    z-index: 99;
+    transition: 2s;
+  }
+
+  .submenu li {
+    min-width: 100%;
+    padding-left: 20px;
+    border: 1px solid var(--border-color);
+  }
+
+  .submenu li:hover {
+    padding-left: 30px;
+  }
+
+  .social {
+    flex: 1;
+  }
+
+  h1 {
+    font-size: 4em;
+    line-height: 1.72em;
+  }
+
+  h3 {
+    font-size: 2.27em;
+  }
+
+  main {
+    max-width: 760px;
+    /* padding: 70px 320px; */
+  }
+
+  .our-services {
+    display: flex;
+    margin: 131px 0;
+  }
+
+  .big-numbers {
+    flex-direction: row;
+    gap: 40px;
+    padding: 0 80px;
+    margin-bottom: 131px;
+  }
+
+  .big-numbers > * {
+    flex: 1;
+  }
+
+  .our-services > * {
+    flex: 1;
+  }
+  .our-services-layout {
+    padding: 0 12%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .containers {
+    flex-direction: row;
+    flex: 1;
+  }
+  .picture img{
+    width: 100%;
+  }
+  .picture:hover img{
+    transform: scale(1.1);
+    opacity: 0.6;
+    transition: all 0.5s ease-in-out;
+  }
+  .picture {
+    
+    overflow: hidden;
+  }
+  .border a:hover::after{
+    content: "" ;
+    width: 30%;
+    border-bottom: 3px solid var(--primary);
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    transition: all 0.5s ease;
+  }
+  
+  
+}

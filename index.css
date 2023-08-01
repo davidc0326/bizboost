@@ -277,7 +277,7 @@ main > * {
 /* .our-services *,
 .big-numbers * {
   /* border: 1px solid var(--body-text); */
-}  */ */
+  /*  */
 
 .our-services {
   margin: 50px 0;
@@ -345,7 +345,7 @@ main > * {
 
 .containers p {
   padding-top: 20px;
-  padding-bottom: 25px;
+  padding-bottom: 10px;
   font-size: 1.6em;
   font-size: var(--base-font);
   font-family: var(--primary-font);
@@ -364,7 +364,7 @@ main > * {
   position: relative;
 }
 
-.border a:hover{
+.border a:hover {
   color: var(--primary);
   transition: 1.2s;
 }
@@ -376,6 +376,67 @@ main > * {
   position: absolute;
   left: 0;
   bottom: -7px;
+}
+/* promotionals section */
+
+.backgroud {
+  background-image: url( /src/img/promotional-contact.jpg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  height: 300px;
+
+  }
+
+  .promotionals span {
+    background-color:black;
+    opacity: 0.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 100%;
+  
+  }
+
+  .backgroud h2{
+    margin-block-start: 0;
+    text-align: center;
+  }
+  .backgroud a {
+    margin-top: 40px;
+  }
+.prueba {
+  width: 100%;
+  height: 500px;
+  background-color: aliceblue;
+}
+/* footer section  */
+
+#email {
+  font-size: 1em;
+  padding: 13px;
+  background-color: transparent;
+  border: 2px solid var(--input-border);
+  border-radius: 4px;
+  color: #ffff;
+  border: 1px solid var(--border-color);
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  width: 160px;
+
+}
+.footer-logo .gradient-button {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: 0;
+  padding: 7px 16px 5px;
+  margin-left: -6px;
 }
 
 /*=======================================
@@ -533,5 +594,6 @@ main > * {
     bottom: -7px;
     transition: all 0.5s ease;
   }
+  
   
 }

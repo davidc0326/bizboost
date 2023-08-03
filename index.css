@@ -202,6 +202,7 @@ a:hover,
   color: var(--background);
 }
 
+
 /*=======================================
     Mobile First
 =========================================*/
@@ -377,67 +378,162 @@ main > * {
   left: 0;
   bottom: -7px;
 }
-/* promotionals section */
 
-.backgroud {
-  background-image: url( /src/img/promotional-contact.jpg);
+  
+
+.promotional-contact{
+  margin-top: 100px;
+  text-align: center;
+  padding: 74px 50px;
+  position: relative;
+}
+.promotional-contact .promotional-content {
+  position: relative;
+  text-align: center;
+  align-content: center;
+  margin: 0;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  background-color: #b71717;
+  width: 100;
+  height: 100;
+  opacity: 0.6; 
+}
+.promotional-contact img{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: o;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.promotional-contact h6 {
+  margin-bottom:0 ;
+}
+.promotional-contact h2{
+  margin-top: 0;
+}
+
+
+/* footer section */
+
+.footer-box {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 50px;
-  height: 300px;
-
-  }
-
-  .promotionals span {
-    background-color:black;
-    opacity: 0.6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 300px;
-    width: 100%;
-  
-  }
-
-  .backgroud h2{
-    margin-block-start: 0;
-    text-align: center;
-  }
-  .backgroud a {
-    margin-top: 40px;
-  }
-.prueba {
-  width: 100%;
-  height: 500px;
-  background-color: aliceblue;
+  gap: 30px;
 }
-/* footer section  */
 
-#email {
+.subscribe {
+  height: 170px;
+  width: 1000px;
+}
+
+.logo a h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+  line-height: 2.5em;
+  font-weight: var(--bold);
+}
+.subscribe h4 {
   font-size: 1em;
+  font-weight: var(--normal);
+  line-height: 2em;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.input-email {
+  font-size: 0.7em;
   padding: 13px;
   background-color: transparent;
-  border: 2px solid var(--input-border);
-  border-radius: 4px;
-  color: #ffff;
-  border: 1px solid var(--border-color);
+  border: solid 2px var(--border-color);
+  color: var(--body-text);
   border-bottom-left-radius: 30px;
   border-top-left-radius: 30px;
-  width: 160px;
+  color: var(--body-text);
+  width: 150px;
+}
 
-}
-.footer-logo .gradient-button {
-  border-top-left-radius: 0px;
+.email-btn {
   border-bottom-left-radius: 0px;
-  border-top-right-radius: 30px;
+  border-top-left-radius: 0px;
   border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
   border: 0;
-  padding: 7px 16px 5px;
+  padding: 9px 17px 11px;
   margin-left: -6px;
+  font-size: 0.8em;
+  font-weight: var(--light);
 }
+
+.quick-links {
+  height: 200px;
+  margin-top: 20px;
+}
+
+.quick-links h2,
+.support h2 {
+  font-size: 0.9em;
+  font-weight: var(--medium);
+  line-height: 2em;
+}
+
+.selected {
+  color: var(--primary);
+}
+
+.quick-links div,
+.support div {
+  list-style: none;
+}
+
+.bottom-nav li a,
+.support li a {
+  font-size: 0.8em;
+  font-weight: var(--normal);
+  line-height: 2.8em;
+}
+
+.support {
+  height: 250px;
+  padding-top: 20px;
+}
+
+.copyright {
+  display: flex;
+  height: 40px;
+}
+
+.copyright p {
+  font-size: 0.7em;
+}
+
+.cp-logo {
+  color: var(--white);
+}
+
+.bottom-border {
+  border-top: solid 2px var(--border-color);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.socials2 {
+  height: 70px;
+}
+
 
 /*=======================================
     TABLET & DESKTOP BREAKPOINTS
@@ -594,6 +690,42 @@ main > * {
     bottom: -7px;
     transition: all 0.5s ease;
   }
-  
+  /* .footer-container {
+    display: flex;
+    flex-direction: row;
+  } */
+
+.promotionals {
+    margin-top: 300px;
+    margin-bottom: 20px;
+  }
+  .quick-links {
+    margin-top: 0px;
+  }
+
+  .what-we-do {
+    height: 500px;
+  }
+
+  .prom-contact {
+    height: 500px;
+  }
+
+  .subscribe,
+  .quick-links,
+  .support {
+    width: 320px;
+  }
+
+  .footer-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .bottom-border {
+    flex-direction: row;
+    justify-content: space-between;
+  }
   
 }

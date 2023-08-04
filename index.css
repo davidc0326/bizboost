@@ -710,6 +710,9 @@ main > * {
   .prom-contact {
     height: 500px;
   }
+  .subscribe{
+    min-width: 282px;
+  }
 
   .subscribe,
   .quick-links,
@@ -744,8 +747,6 @@ main > * {
     bottom: 20px;
     right: 20px;
     z-index: 9999;
-    /* margin: 20px;
-    padding: 0px; */
   } 
 
   .float:hover {
